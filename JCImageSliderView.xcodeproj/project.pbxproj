@@ -15,6 +15,8 @@
 		041A31051C15627D0019229A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041A31031C15627D0019229A /* LaunchScreen.storyboard */; };
 		041A31101C15627D0019229A /* JCImageSliderViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A310F1C15627D0019229A /* JCImageSliderViewTests.m */; };
 		041A311B1C15627E0019229A /* JCImageSliderViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A311A1C15627E0019229A /* JCImageSliderViewUITests.m */; };
+		041A31311C1563C40019229A /* JCImageSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A31301C1563C40019229A /* JCImageSliderView.m */; settings = {ASSET_TAGS = (); }; };
+		041A31331C1563CD0019229A /* JCImageSliderView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 041A31321C1563CD0019229A /* JCImageSliderView.bundle */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		041A31161C15627E0019229A /* JCImageSliderViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JCImageSliderViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		041A311A1C15627E0019229A /* JCImageSliderViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCImageSliderViewUITests.m; sourceTree = "<group>"; };
 		041A311C1C15627E0019229A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041A312F1C1563C40019229A /* JCImageSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCImageSliderView.h; sourceTree = "<group>"; };
+		041A31301C1563C40019229A /* JCImageSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCImageSliderView.m; sourceTree = "<group>"; };
+		041A31321C1563CD0019229A /* JCImageSliderView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JCImageSliderView.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 		041A30F41C15627D0019229A /* JCImageSliderView */ = {
 			isa = PBXGroup;
 			children = (
+				041A312E1C1563C40019229A /* JCImageSliderView */,
 				041A30F81C15627D0019229A /* AppDelegate.h */,
 				041A30F91C15627D0019229A /* AppDelegate.m */,
 				041A30FB1C15627D0019229A /* ViewController.h */,
@@ -109,6 +115,7 @@
 				041A31011C15627D0019229A /* Assets.xcassets */,
 				041A31031C15627D0019229A /* LaunchScreen.storyboard */,
 				041A31061C15627D0019229A /* Info.plist */,
+				041A31321C1563CD0019229A /* JCImageSliderView.bundle */,
 				041A30F51C15627D0019229A /* Supporting Files */,
 			);
 			path = JCImageSliderView;
@@ -138,6 +145,15 @@
 				041A311C1C15627E0019229A /* Info.plist */,
 			);
 			path = JCImageSliderViewUITests;
+			sourceTree = "<group>";
+		};
+		041A312E1C1563C40019229A /* JCImageSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				041A312F1C1563C40019229A /* JCImageSliderView.h */,
+				041A31301C1563C40019229A /* JCImageSliderView.m */,
+			);
+			path = JCImageSliderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +261,7 @@
 			files = (
 				041A31051C15627D0019229A /* LaunchScreen.storyboard in Resources */,
 				041A31021C15627D0019229A /* Assets.xcassets in Resources */,
+				041A31331C1563CD0019229A /* JCImageSliderView.bundle in Resources */,
 				041A31001C15627D0019229A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041A31311C1563C40019229A /* JCImageSliderView.m in Sources */,
 				041A30FD1C15627D0019229A /* ViewController.m in Sources */,
 				041A30FA1C15627D0019229A /* AppDelegate.m in Sources */,
 				041A30F71C15627D0019229A /* main.m in Sources */,
