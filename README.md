@@ -7,17 +7,18 @@
 ---
 
 
-### Usage
+## Usage
+### create view
+
 ```
 JCImageSliderView *imageSliderView = [[JCImageSliderView alloc] initWithFrame:CGRectMake(0, 0, width, height) imageSliderItems:array pageControlPosition:JCPageControlPositionRight];
 
 imageSliderView.delegate = self;
+[self.view addSubView:imageSliderView];
+```
 
-......
-
-
-#pragma mark - JCImageSliderViewDelegate
-
+#### delegate
+```
 - (void)imageSliderView:(JCImageSliderView *)imageSliderView didSelectAtIndex:(NSInteger)index {
     JCImageSliderItem *item = _imageSliderItems[index];
     NSLog(@"%@", item.title);
