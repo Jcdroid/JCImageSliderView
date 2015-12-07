@@ -12,7 +12,6 @@
 
 ```
 JCImageSliderView *imageSliderView = [[JCImageSliderView alloc] initWithFrame:CGRectMake(0, 0, width, height) imageSliderItems:array pageControlPosition:JCPageControlPositionRight];
-
 imageSliderView.delegate = self;
 [self.view addSubView:imageSliderView];
 ```
@@ -20,7 +19,7 @@ imageSliderView.delegate = self;
 #### Delegate
 ```
 - (void)imageSliderView:(JCImageSliderView *)imageSliderView didSelectAtIndex:(NSInteger)index {
-    JCImageSliderItem *item = _imageSliderItems[index];
+    JCImageSliderItem *item = array[index];
     NSLog(@"%@", item.title);
 }
 ```
