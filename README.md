@@ -17,7 +17,7 @@ imageSliderView.delegate = self;
 [self.view addSubView:imageSliderView];
 ```
 
-#### delegate
+#### set delegate
 ```
 - (void)imageSliderView:(JCImageSliderView *)imageSliderView didSelectAtIndex:(NSInteger)index {
     JCImageSliderItem *item = _imageSliderItems[index];
