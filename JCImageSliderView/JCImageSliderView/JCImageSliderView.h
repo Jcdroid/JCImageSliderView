@@ -35,6 +35,10 @@ typedef NS_ENUM(NSUInteger, JCPageControlPosition) {
 
 @property (nonatomic, weak, nullable) id <JCImageSliderViewDelegate> delegate;
 
+- (void)continueTimer;
+- (void)pauseTimer;
+- (void)endTimer;
+
 @end
 
 @interface JCImageSliderItem : NSObject

@@ -55,6 +55,20 @@
     });
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_imageSliderView continueTimer];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [_imageSliderView pauseTimer];
+}
+
+- (void)dealloc {
+    [_imageSliderView endTimer];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
