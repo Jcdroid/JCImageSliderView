@@ -11,7 +11,7 @@
 ### Creation of a JCImageSliderView
 
 ```
-JCImageSliderView *imageSliderView = [[JCImageSliderView alloc] initWithFrame:CGRectMake(0, 0, width, height) imageSliderItems:array pageControlPosition:JCPageControlPositionRight];
+JCImageSliderView *imageSliderView = [[JCImageSliderView alloc] initWithFrame:CGRectMake(0, 0, width, height) imageSliderItems:array pageControlPosition:JCPageControlPositionRight timeInterval:4.0];
 imageSliderView.delegate = self;
 [self.view addSubView:imageSliderView];
 ```

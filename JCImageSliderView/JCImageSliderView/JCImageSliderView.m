@@ -11,6 +11,7 @@
 #define kPadding 5.0f
 #define kLabelHeight 21.0f
 #define kBottomViewHeight 30.0f
+#define kDefaultTimerInterval 4.0
 
 @interface JCImageSliderView () <UIScrollViewDelegate> {
     NSMutableArray *_imageViewsContainer;
@@ -20,6 +21,7 @@
 
 @property (strong, nonatomic, nonnull) NSArray *imageSliderItems;
 @property (nonatomic, assign) JCPageControlPosition pageControlPosition;
+@property (nonatomic, assign) NSTimeInterval timeInterval;
 
 @property (strong, nonatomic) UIScrollView *scrollView;
 
@@ -41,11 +43,12 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame imageSliderItems:(NSArray *)imageSliderItems pageControlPosition:(JCPageControlPosition)pageControlPosition {
+- (nonnull instancetype)initWithFrame:(CGRect)frame imageSliderItems:(nonnull NSArray *)imageSliderItems pageControlPosition:(JCPageControlPosition)pageControlPosition timeInterval:(NSTimeInterval)timeInterval {
     self = [super initWithFrame:frame];
     if (self) {
         self.imageSliderItems = imageSliderItems;
         self.pageControlPosition = pageControlPosition;
+        self.timeInterval = timeInterval;
         [self commonInit];
     }
     return self;
@@ -133,7 +136,7 @@
         [_imageViewsContainer addObject:imageViews];
     }
     
-    _singleImageWidth = self.scrollView.frame.size.width;
+    _singleImageWidth = CGRectGetWidth(self.scrollView.frame);
     _allImageWidth = _singleImageWidth * _imageSliderItems.count;
     [_scrollView setContentOffset:CGPointMake(_allImageWidth, 0)];
     
@@ -190,7 +193,11 @@
 
 - (void)createTimer {
     if (!_timer) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(scrollToNext:) userInfo:nil repeats:YES];
+        
+        if (_timeInterval <= 0) {
+            _timeInterval = kDefaultTimerInterval;
+        }
+        _timer = [NSTimer scheduledTimerWithTimeInterval:_timeInterval target:self selector:@selector(scrollToNext:) userInfo:nil repeats:YES];
     }
 }
 

@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, JCPageControlPosition) {
 
 @interface JCImageSliderView : UIView
 
-- (nonnull instancetype)initWithFrame:(CGRect)frame imageSliderItems:(nonnull NSArray *)imageSliderItems pageControlPosition:(JCPageControlPosition)pageControlPosition;
+- (nonnull instancetype)initWithFrame:(CGRect)frame imageSliderItems:(nonnull NSArray *)imageSliderItems pageControlPosition:(JCPageControlPosition)pageControlPosition timeInterval:(NSTimeInterval)timeInterval;
 
 @property (nonatomic, weak, nullable) id <JCImageSliderViewDelegate> delegate;
 

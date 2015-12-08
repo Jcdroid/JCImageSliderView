@@ -48,7 +48,7 @@
                           ];
     
     _imageSliderView = ({
-        JCImageSliderView *imageSliderView = [[JCImageSliderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth * 3 / 4) imageSliderItems:_imageSliderItems pageControlPosition:JCPageControlPositionRight];
+        JCImageSliderView *imageSliderView = [[JCImageSliderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth * 3 / 4) imageSliderItems:_imageSliderItems pageControlPosition:JCPageControlPositionRight timeInterval:4.0];
         imageSliderView.delegate = self;
         [self.view addSubview:imageSliderView];
         imageSliderView;
